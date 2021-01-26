@@ -29,6 +29,13 @@ jobs:
         uses: ./ci/images/debian10
         with:
           args: ./ci/steps/test.sh
+  e2e:
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run ./ci/steps/test.sh
+        uses: ./ci/images/playwright
+        with:
+          args: ./ci/steps/test.sh
 
   release:
     runs-on: ubuntu-latest
