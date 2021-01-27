@@ -162,4 +162,4 @@ jobs:
           ls
       - name: Untar code-server file
         run: |
-          tar -xfz release-packages/code-server*-linux-amd64.tar.gz
+          tar -xzf release-packages/code-server*-linux-amd64.tar.gz
