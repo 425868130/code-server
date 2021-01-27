@@ -146,6 +146,7 @@ jobs:
           path: ./release-images
 
   e2e:
+    needs: docker-amd64
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
