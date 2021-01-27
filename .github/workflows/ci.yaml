@@ -167,5 +167,6 @@ jobs:
       - name: Install dependencies and run tests
         run: |
           node code-server*-linux-amd64 &
+          yarn
           yarn test
           pkill node
