@@ -166,6 +166,6 @@ jobs:
       - uses: microsoft/playwright-github-action@v1
       - name: Install dependencies and run tests
         run: |
-          node code-server-* &
+          node code-server*-linux-amd64 &
           yarn test
           pkill node
