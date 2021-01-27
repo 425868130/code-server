@@ -165,4 +165,7 @@ jobs:
           tar -xzf release-packages/code-server*-linux-amd64.tar.gz
       - uses: microsoft/playwright-github-action@v1
       - name: Install dependencies and run tests
-        run: node code-server-* & && yarn test && pkill node
+        run: |
+          node code-server-* &
+          yarn test
+          pkill node
