@@ -155,3 +155,8 @@ jobs:
         with:
           name: release-packages
           path: ./release-packages
+      - name: Untar code-server file
+        run: |
+          tar -xfz release-packages/code-server.tar.gz
+          echo "untar complete"
+          ls
