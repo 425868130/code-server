@@ -155,10 +155,11 @@ jobs:
         with:
           name: release-packages
           path: ./release-packages
-      - name: Untar code-server file
+      - name: See working directory and files
         run: |
           echo "This better print"
           pwd
           ls
+      - name: Untar code-server file
         run: |
           tar -xfz release-packages/code-server*-linux-amd64.tar.gz
